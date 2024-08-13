@@ -93,13 +93,6 @@ def draw_intersected_bounding_box_on_mask_image(mask_image,intersected_contours)
         # cv2.dilate(blank_mask_image,kernel,iterations=1)
         cv2.fillPoly(mask_image, [cnt11], (255))
        
-    # kernel = np.ones((3, 3), np.uint8)
-
-    # cv2.imwrite("text_area_masks_ca_colma_1.jpg",blank_mask_image)
-    # mask_image_dilated = cv2.dilate(blank_mask_image,kernel,iterations=2)
-    # merged_result = cv2.bitwise_or(mask_image_dilated,mask_image)
-   
-    # return merged_result
     return mask_image
 
 def process_image(source_image_path, source_mask_path, output_dir):
